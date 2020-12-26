@@ -1,0 +1,23 @@
+.skill-box {
+  margin-bottom: 10px;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.skill {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  /*margin-top: 1;*/
+}
+
+.skill-bar {
+  background-color: #ff7720;
+  height: 8px;
+}
+

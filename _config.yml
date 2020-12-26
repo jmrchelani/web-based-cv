@@ -1,0 +1,118 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+name: MyNameHere
+profile_pic: https://avatars3.githubusercontent.com/u/58991510?s=460&u=88a9bce796db82b198ee21b29e4966e17d1de445&v=4
+title: Website Title
+email: your-email@example.com
+linkedin: linkedinLinkHere
+address: Full Address here
+phone: Phone number here
+date_of_birth: 25-20-2002
+skills:
+  - Your skills list
+  - Here
+  - and here
+summary: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+work_experience:
+  - name: "GHT Company, Madrid Spain"
+    position: Data Analyst
+    start: 04/14
+    end: 07/18
+    respo:
+      - Data Analyst, Ght Company Madrid
+      - Prepare data and information for making regular data analysis report
+
+  - name: "Data Analyst, GHT Company, Madrid Spain"
+    start: 04/14
+    end: 07/18
+    respo:
+      - Data Analyst, Ght Company Madrid
+      - Prepare data and information for making regular data analysis report
+
+education:
+  - school: Technical University of Madrid
+    start: 2004
+    end: 2008
+    degree: Bachelor's Degree of Computer Science, Technical University of Madrid
+
+  - school: Muet lol
+    start: 2019
+    end: Present
+    degree: Not yet buddy but soon
+
+languages:
+  - name: English
+    level: 90%
+  - name: Spanish
+    level: 80%
+
+references:
+  - name: NameHere
+    email: example@email.com
+  - name: AnotherBoy
+    email: exampletoo@gmail.com
+
+personalities:
+  - Communicative
+  - Creative
+  - Punctual
+
+skills: 
+  - Great Communication Skills
+  - Excellent Marketing Skills
+  - Ready to work always
+  - What more lol
+
+certifications:
+  - name: Java (Basic)
+    by: HackerRank
+  - name: MTA Java
+    by: Microsoft
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

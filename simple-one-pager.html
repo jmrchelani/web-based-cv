@@ -1,0 +1,124 @@
+---
+layout: default
+---
+<!-- By Kailash --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="style-simple-one-pager.css">
+</head>
+<body>
+
+    <div id="container">
+        <section id="part1">
+            <div class="dp">
+                <img src="{{ site.profile_pic }}" alt="profile_photo">
+            </div>
+
+            <div class="name">
+                <h1>{{ site.name }}</h1>
+            </div>
+
+            <div class="contact-details">
+                <h2 class="contact-title">Contact</h2>
+
+                <h3 class="address-title">Address</h3>
+                <address> {{ site.address }}
+                </address>
+
+                <h3 class="phone-title">Phone</h3>
+                <p>{{ site.phone }}</p>
+
+                <h3 class="email-id">Email</h3>
+                <p>{{ site.email }}</p>
+
+                <h3 class="linkedin-title">Linkedin</h3>
+                <p>{{ site.linkedin }}</p>
+            </div>
+
+            <div class="additional-skills">
+
+                <h2 class="bar">Additional Skills</h2>
+
+               <div class="lists">
+                <ul>
+                    {% if site.skills %}
+                    {% for skill in site.skills %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                    {% endif %}
+                </ul>
+               </div>
+            </div>
+
+        </section>
+    
+        <section id="part2">
+           <div class="first-child">
+                <h2 class="summary">Professional Summary</h2>
+                
+                <p> {{ site.summary }}
+                </p>
+           </div>
+
+
+           <div class="second-child">
+                <h2 class="work-title">Work Experience</h2>
+                {% if site.work_experience %}
+                    {% for exp in site.work_experience %}
+                        <div class = "period"> {{ exp.start }} - {{ exp.end }} </div>
+                        <h3> {{ exp.position }}, {{ exp.name }} </h3>
+                        {% if exp.respo %}
+                            <h4>Responsibilities: </h4>
+                            <ul>
+                                {% for resp in exp.respo %}
+                                    <li>{{ resp }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                
+           </div>
+
+            {% if site.education %}
+           <div class="third-child">
+                <h2 class="education-title">Education</h2>
+                {% for ed in site.education %}
+                    <div class="period">{{ ed.start }} - {{ ed.end }}</div>
+                    <h3>{{ ed.school }}</h3>
+                    <h5>{{ ed.degree }}</h5>
+                {% endfor %}
+            
+            </div>
+            {% endif %}
+
+            {% if site.languages %}
+            <div class="fourth-child">
+                <h2 class="language-title">Languages</h2>
+                {% for lng in site.languages %}
+                    <h5>{{ lng.name }} - <i>{{ lng.level }}</i></h5>
+                {% endfor %}
+                
+            </div>
+            {% endif %}
+
+            {% if site.references %}
+            <div class="fifth-child">
+                <h2 class="reference">Reference</h2>
+                {% for ref in site.references %}
+                    <h6>{{ ref.name }} - <i>{{ ref.email }}</i></h6>
+                {% endfor %}
+                
+            </div>
+            {% endif %}
+
+        </section>
+    </div>
+    
+</body>
+</html>

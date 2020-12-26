@@ -1,0 +1,205 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <style> .skill-box {
+        margin-bottom: 10px;
+      }
+      
+      .skill-title {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        margin-bottom: 5px;
+      }
+      
+      .skill {
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 7px;
+        /*margin-top: 1;*/
+      }
+      
+      .skill-bar {
+        background-color: #ff7720;
+        height: 8px;
+      } </style>
+</head>
+
+<body style="font-family: cambria;">
+    <div class="row" style="/*color: #282828;*/">
+        <div class="col-10 col-lg-3 offset-1 offset-lg-1" style="background-color: #282828;">
+            <div class="row">
+                <div class="col">
+                    <div><img src="{{ site.profile_pic }}" width="130px" style="display: block;margin-left: auto;margin-right: auto;border-radius: 50%;border-color: #19B1C8;border: 5px solid #19B1C8;margin-top: 20px;margin-bottom: 10px;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 90%;/*height: 2.5em;*/border-radius: 0 999px 999px 0px;">Personal Information</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <div class="row">
+                            <div class="col">
+                                <div style="margin-bottom: 10px;">
+                                    <h6 style="color: white;"><strong>Address:</strong></h6><em style="color: white;">{{ site.address }}</em></div>
+                                <div style="margin-bottom: 10px;">
+                                    <h6 style="color: white;">Contact:</h6><em style="color: white;">{{ site.phone }}<br>{{ site.email }}<br></em></div>
+                                <div style="margin-bottom: 10px;">
+                                    <h6 style="color: white;">Date of Birth:</h6><em style="color: white;">{{ site.date_of_birth }}</em></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 90%;/*height: 2.5em;*/border-radius: 0 999px 999px 0px;">Languages</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        {% if site.languages %}
+                            {% for lng in site.languages %}
+                            <div class="skill-box">
+                                <div class="skill-title">
+                                    <a>{{ lng.name }}</a>
+                                </div>
+                                <div class="skill">
+                                    <div class="skill-bar" style="width:{{ lng.level }}"></div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 90%;/*height: 2.5em;*/border-radius: 0 999px 999px 0px;">Personality</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col">
+                    <div>
+                        {% for per in site.personalities %}
+                        <i style="color: white;" class="fas fa-check"></i> <i style="color: white;">{{ per }}</i>
+<br>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 col-lg-7 offset-1 offset-lg-0">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h3 style="margin-top: 10px;">{{ site.name }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 98%;/*height: 2.5em;*/border-radius: 0px 999px 999px 0px;/*display: flex;*/">Profile</h6>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <p style="margin-top: 10px;">{{ site.summary }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 98%;/*height: 2.5em;*/border-radius: 0px 999px 999px 0px;/*display: flex;*/">Education</h6>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <div class="col">
+                            {% if site.education %}
+                                {% for ed in site.education %}
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col">
+                                            <div><em>{{ ed.start }}-{{ ed.end }}</em>
+                                                <h6 style="margin-bottom: 0px;">{{ ed.school }}</h6><em>{{ ed.degree }}</em></div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 98%;/*height: 2.5em;*/border-radius: 0px 999px 999px 0px;/*display: flex;*/">Experience</h6>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <div class="col">
+                            {% if site.work_experience %}
+                                {% for ex in site.work_experience %}
+                                <div class="row" style="margin-bottom: 20px;">
+                                    <div class="col">
+                                        <div><em>{{ ex.start }} - {{ ex.end }}</em>
+                                            <h6 style="margin-bottom: 0px;">{{ ex.name }}</h6><em>{{ ex.position }}</em></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 98%;/*height: 2.5em;*/border-radius: 0px 999px 999px 0px;/*display: flex;*/">Skills</h6>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {% for sk in site.skills %}
+                    <div><i class="fas fa-check"></i> <i>{{ sk }}</i>
+                        <br>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="row">
+                <h6 style="color: white;/*background-color: background-color: #282828;*/background-color: #19B1C8;margin-top: 10px;margin-bottom: 10px;border: 5px solid #19B1C8;box-sizing: border-box;width: 98%;/*height: 2.5em;*/border-radius: 0px 999px 999px 0px;/*display: flex;*/">Certification</h6>
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col">
+                    <div>
+                        {% for cert in site.certifications %}
+                        <i class="fas fa-trophy"></i>
+                        <i>{{ cert.name }} - {{ cert.by }}</i>
+                        <br>
+                        {% endfor %}
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
